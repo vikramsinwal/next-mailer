@@ -1,0 +1,19 @@
+/* 1️⃣ ALL @import MUST BE FIRST */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round");
+
+/* 2️⃣ THEN Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3️⃣ THEN your custom CSS */
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  min-height: max(884px, 100dvh);
+}
+
+.ios-shadow {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
