@@ -4,6 +4,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { sendMailAction } from "@/app/actions/sendMail";
+import RichTextEditor from "./RichTextEditor";
 
 export default function ContactForm() {
     const [errors, setErrors] = useState<Record<string, string>>({});
@@ -130,7 +131,7 @@ export default function ContactForm() {
             </div>
 
             {/* Message */}
-            <div className="space-y-1.5">
+            {/* <div className="space-y-1.5">
                 <label className="flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-400">
                     Message Body
                 </label>
@@ -150,6 +151,12 @@ export default function ContactForm() {
                 {errors.message && (
                     <p className="text-red-500 text-sm">{errors.message}</p>
                 )}
+            </div> */}
+            <div className="space-y-1.5">
+                <RichTextEditor
+                    name="message"
+                    error={errors.message}
+                />
             </div>
 
             {/* Submit */}

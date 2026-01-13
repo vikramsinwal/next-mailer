@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { contactSchema } from "@/lib/validators/contact.schema";
-import { sendMail } from "@/lib/mailer";
+// import { sendMail } from "@/lib/mailer";
+import { sendMail } from "@/lib/services/mail.service";
 
 export async function POST(req: Request) {
   try {

@@ -17,3 +17,98 @@ body {
 .ios-shadow {
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
 }
+/* ============================= */
+/* CKEditor Dark Mode Support */
+/* ============================= */
+
+/* Editor editable area */
+.dark .ck.ck-editor__editable_inline {
+  background-color: rgb(15 23 42); /* slate-900 */
+  color: rgb(226 232 240); /* slate-200 */
+  min-height: 180px;
+}
+
+/* Toolbar background */
+.dark .ck.ck-toolbar {
+  background-color: rgb(30 41 59); /* slate-800 */
+  border-color: rgb(51 65 85); /* slate-700 */
+}
+
+/* Toolbar buttons */
+.dark .ck.ck-button {
+  color: rgb(226 232 240);
+}
+
+.dark .ck.ck-button:hover,
+.dark .ck.ck-button.ck-on {
+  background-color: rgb(51 65 85); /* slate-700 */
+}
+
+/* Dropdown panels */
+.dark .ck.ck-dropdown__panel {
+  background-color: rgb(30 41 59);
+  border-color: rgb(51 65 85);
+}
+
+/* Icons */
+.dark .ck.ck-icon * {
+  stroke: rgb(226 232 240);
+}
+
+/* Placeholder text */
+.dark .ck.ck-editor__editable_inline.ck-placeholder::before {
+  color: rgb(148 163 184); /* slate-400 */
+}
+
+/* ============================= */
+/* CKEditor Dark Mode Support */
+/* ============================= */
+
+/* Editor editable area */
+.dark .ck.ck-editor__editable_inline {
+  background-color: rgb(15 23 42); /* slate-900 */
+  color: rgb(226 232 240); /* slate-200 */
+  min-height: 180px;
+}
+
+/* Toolbar background */
+.dark .ck.ck-toolbar {
+  background-color: rgb(30 41 59); /* slate-800 */
+  border-color: rgb(51 65 85); /* slate-700 */
+}
+
+/* Toolbar buttons */
+.dark .ck.ck-button {
+  color: rgb(226 232 240);
+}
+
+.dark .ck.ck-button:hover,
+.dark .ck.ck-button.ck-on {
+  background-color: rgb(51 65 85); /* slate-700 */
+}
+
+/* Dropdown panels */
+.dark .ck.ck-dropdown__panel {
+  background-color: rgb(30 41 59);
+  border-color: rgb(51 65 85);
+}
+
+/* Icons */
+.dark .ck.ck-icon * {
+  stroke: rgb(226 232 240);
+}
+
+/* Placeholder text */
+.dark .ck.ck-editor__editable_inline.ck-placeholder::before {
+  color: #2a374a /* slate-400 */
+}
+/* Main Area */
+.ck.ck-editor__main>.ck-editor__editable {
+  background: #172032;
+}
+.ck.ck-editor__main .ck-editor__editable:not(.ck-focused) {
+  border-color: #2a374a;
+}
+.ck.ck-icon.ck-icon_inherit-color, .ck.ck-icon.ck-icon_inherit-color * {
+    color: rgb(148 163 184);
+}
