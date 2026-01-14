@@ -3,7 +3,12 @@
 import { contactSchema } from "@/lib/validators/contact.schema";
 import { sendMail } from "@/lib/3p-api/php-mailer";
 import { verifyCaptcha } from "@/lib/verifyCaptcha";
-import { emailTemplate } from "@/lib/emailTemplate"
+import { getEmailTemplate } from "@/lib/emailTemplateResolver";
+import {
+    saveEmail,
+    markEmailSent,
+    markEmailFailed,
+} from "@/lib/services/mail.service";
 
 export async function sendMailAction(formData: unknown) {
     const data = contactSchema.parse(formData);
@@ -14,12 +19,37 @@ export async function sendMailAction(formData: unknown) {
     const isHuman = await verifyCaptcha(data.token);
     if (!isHuman) throw new Error("Captcha failed");
 
-    await sendMail({
+    // Generate email HTML
+    const html = getEmailTemplate(data);
+    // 💾 save email to DB
+    const emailDoc = await saveEmail({
         to: data.email,
-        subject: data.subject,
-        // html: emailTemplate(data),
-        html: data.message,
         fromEmail,
         fromName,
+        subject: data.subject,
+        html,
+        templateKey: data.templateKey,
     });
+
+    try {
+        // Send email
+        await sendMail({
+            to: data.email,
+            subject: data.subject,
+            html,
+            fromEmail,
+            fromName,
+        });
+
+        //Mark as SENT
+        await markEmailSent(emailDoc._id.toString());
+    } catch (error: any) {
+        // Mark as FAILED
+        await markEmailFailed(
+            emailDoc._id.toString(),
+            error?.message || "Mail sending failed"
+        );
+
+        throw error;
+    }
 }

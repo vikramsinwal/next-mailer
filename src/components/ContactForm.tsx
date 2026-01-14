@@ -47,6 +47,30 @@ export default function ContactForm() {
 
     return (
         <form onSubmit={handleSubmit} className="space-y-5">
+            {/* Template Selector */}
+            <div className="space-y-1.5">
+                <label className="text-sm font-medium text-slate-600 dark:text-slate-400">
+                    Email Template
+                </label>
+                <select
+                    name="templateKey"
+                    defaultValue="contact"
+                    className="w-full bg-slate-50 dark:bg-slate-900/50
+                    border border-slate-200 dark:border-slate-700
+                    rounded-xl px-4 py-3 text-slate-800 dark:text-slate-200
+                    focus:ring-2 focus:ring-primary focus:border-primary"
+                >
+                    <option value="blackberry">Blackberry</option>
+                    <option value="amazon">Amazon</option>
+                    <option value="farber">Farber</option>
+                    <option value="flipkart">Flipkart</option>
+                    <option value="generic">Generic</option>
+                </select>
+                {errors.templateKey && (
+                    <p className="text-red-500 text-sm">{errors.templateKey}</p>
+                )}
+            </div>
+
             {/* From Name */}
             <div className="space-y-1.5">
                 <label className="flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-400">
