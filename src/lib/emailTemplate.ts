@@ -1,16 +1,16 @@
 import { ContactFormData } from "@/lib/validators/contact.schema";
 
 export const amazonTemplate = (data: ContactFormData) => `
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#292929;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;">
   <tr>
-    <td align="center" style="padding:40px 0;">
+    <td align="center" style="padding:15px 0;">
 
       <!-- Card -->
       <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:14px;overflow:hidden;">
 
         <!-- Header -->
         <tr>
-          <td align="center" style="background:#f0f2f2;padding:40px;">
+          <td align="left" style="background:#f0f2f2;padding:15px;">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/256px-Amazon_logo.svg.png"
               width="60"
