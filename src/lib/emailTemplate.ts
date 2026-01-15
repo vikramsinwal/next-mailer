@@ -10,7 +10,7 @@ export const amazonTemplate = (data: ContactFormData) => `
 
         <!-- Header -->
         <tr>
-          <td align="left" style="background:#f0f2f2;padding:15px;">
+          <td align="center" style="background:#f0f2f2;padding:15px;">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/256px-Amazon_logo.svg.png"
               width="60"
