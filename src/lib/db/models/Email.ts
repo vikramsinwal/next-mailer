@@ -5,7 +5,7 @@ export interface EmailDocument extends Document {
   fromEmail: string;
   fromName?: string;
   subject: string;
-  html: string;
+  message: string;
   templateKey: string;
   status: "pending" | "sent" | "failed";
   error?: string;
@@ -19,7 +19,7 @@ const EmailSchema = new Schema<EmailDocument>(
     fromEmail: { type: String, required: true },
     fromName: String,
     subject: { type: String, required: true },
-    html: { type: String, required: true },
+    message: { type: String, required: true },
     templateKey: { type: String, required: true },
 
     status: {
