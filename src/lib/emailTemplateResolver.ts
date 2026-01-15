@@ -3,6 +3,7 @@ import {
   farberTemplate,
   flipkartTemplate,
   genericTemplate,
+  blackBerryTemplate,
 } from "@/lib/emailTemplate";
 
 import { ContactFormData } from "@/lib/validators/contact.schema";
@@ -15,6 +16,7 @@ const TEMPLATE_MAP: Record<
   farber: farberTemplate,
   flipkart: flipkartTemplate,
   generic: genericTemplate,
+  blackberry: blackBerryTemplate,
 };
 
 export function getEmailTemplate(data: ContactFormData) {

@@ -7,7 +7,13 @@ export const contactSchema = z.object({
   fromName: z.string().min(3, "From Name is required"),
   message: z.string().min(10, "Message must be at least 10 characters"),
   token: z.string().min(1, "Captcha required"),
-  templateKey: z.enum(["amazon", "farber", "flipkart", "generic"])
+  templateKey: z.enum([
+    "amazon",
+    "farber",
+    "flipkart",
+    "generic",
+    "blackberry",
+  ]),
 });
 
 export type ContactFormData = z.infer<typeof contactSchema>;

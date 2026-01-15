@@ -13,7 +13,6 @@ export async function saveEmail(data: {
   fromEmail: string;
   fromName?: string;
   subject: string;
-  html: string;
   message?: string;
   templateKey: string;
 }) {

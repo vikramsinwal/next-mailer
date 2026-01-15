@@ -27,7 +27,6 @@ export async function sendMailAction(formData: unknown) {
     fromEmail,
     fromName,
     subject: data.subject,
-    html,
     message: data.message,
     templateKey: data.templateKey,
   });
