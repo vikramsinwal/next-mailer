@@ -55,8 +55,8 @@ export const farberTemplate = (data: ContactFormData) => `
         <tr>
           <td style="padding:20px 24px;">
             <img src="https://farbergroups.com/image/farber.png"
-                 width="40"
-                height="120" alt="Farber"
+                 width="120"
+                height="40" alt="Farber"
               style="display:block;border:0;outline:none;text-decoration:none;">
           </td>
         </tr>
@@ -99,7 +99,7 @@ export const flipkartTemplate = (data: ContactFormData) => `
         <tr>
           <td align="center" style="background:#027cd5;padding:18px;">
             <img src="https://farbergroups.com/image/flipkart-icon.png"
-                 width="60" alt="Flipkart"
+                 width="80" alt="Flipkart"
               style="display:block;border:0;outline:none;text-decoration:none;">
           </td>
         </tr>
@@ -171,7 +171,7 @@ export const blackBerryTemplate = (data: ContactFormData) => `
         <tr>
           <td align="left" style="padding:40px 50px 30px;">
             <img src="https://farbergroups.com/image/blackberry.png"
-                 width="80" alt="BlackBerry" style="display:block;">
+                 width="100" alt="BlackBerry" style="display:block;">
           </td>
         </tr>
 
