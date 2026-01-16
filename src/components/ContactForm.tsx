@@ -60,11 +60,11 @@ export default function ContactForm() {
                     rounded-xl px-4 py-3 text-slate-800 dark:text-slate-200
                     focus:ring-2 focus:ring-primary focus:border-primary"
                 >
-                    <option value="blackberry">Blackberry</option>
+                    <option value="generic">Generic</option>
                     <option value="amazon">Amazon</option>
+                    <option value="blackberry">Blackberry</option>
                     <option value="farber">Farber</option>
                     <option value="flipkart">Flipkart</option>
-                    <option value="generic">Generic</option>
                 </select>
                 {errors.templateKey && (
                     <p className="text-red-500 text-sm">{errors.templateKey}</p>
