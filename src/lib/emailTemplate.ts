@@ -12,9 +12,9 @@ export const amazonTemplate = (data: ContactFormData) => `
           <tr>
             <td align="center" style="background:#f0f2f2;padding:15px;">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/256px-Amazon_logo.svg.png"
+                src="https://farbergroups.com/image/amazon.png"
                 width="80"
-                height="60"
+                height="80"
                 alt="Amazon"
                 style="display:block;border:0;outline:none;text-decoration:none;"
               />
