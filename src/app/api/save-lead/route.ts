@@ -16,8 +16,8 @@ export async function POST(req: Request) {
       contactNumber: data.contactNumber,
       message: data.message,
     });
-    await sendEnquiryMail(data);
-    return NextResponse.json({ success: true });
+    let mailSent = await sendEnquiryMail(data);
+    return NextResponse.json({ success: true, result: mailSent });
   } catch (error) {
     // ❌ Zod validation error
     if (error instanceof Error && "issues" in error) {
