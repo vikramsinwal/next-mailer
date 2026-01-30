@@ -76,7 +76,7 @@ export const farberTemplate = (data: ContactFormData) => `
         <tr>
           <td align="center" style="padding:6px 10px;color:#ffffff;font-size:12px;line-height:18px;">
             Licensed Insolvency Trustee<br>
-            © 2025 Farber. All rights reserved.
+            © 2026 Farber. All rights reserved.
           </td>
         </tr>
 
