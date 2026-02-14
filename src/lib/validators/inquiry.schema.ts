@@ -10,6 +10,8 @@ export const inquirySchema = z.object({
   subCategory: z.string().min(1, "Sub Category is required"),
   subCategoryName: z.string().optional(),
   message: z.string().optional(),
+  plan: z.string().optional(),
+  amount: z.number().optional(),
 });
 
 export type InquiryFormData = z.infer<typeof inquirySchema>;

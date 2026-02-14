@@ -45,6 +45,8 @@ export async function POST(req: Request) {
     const savedPayment = await savePayment({
       inquiryId: data.inquiryId,
       utrNumber: data.utrNumber,
+      plan: data.plan,
+      amount: data.amount,
       paymentProof: data.paymentProof,
       fileName: data.fileName,
       fileSize: data.fileSize,
@@ -57,6 +59,8 @@ export async function POST(req: Request) {
         {
           inquiryId: data.inquiryId,
           utrNumber: data.utrNumber,
+          plan: inquiry.plan,
+          amount: inquiry.amount,
           paymentProof: data.paymentProof,
           fileName: data.fileName,
           fileSize: data.fileSize,

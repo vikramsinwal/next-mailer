@@ -3,6 +3,8 @@ import mongoose, { Schema, Document } from "mongoose";
 export interface PaymentDocument extends Document {
   inquiryId: mongoose.Types.ObjectId;
   utrNumber: string;
+  plan?: string;
+  amount?: number;
   paymentProof: string; // base64 or URL
   fileName: string;
   fileSize: number;
@@ -23,6 +25,8 @@ const PaymentSchema = new Schema<PaymentDocument>(
     },
     utrNumber: { type: String, required: true },
     paymentProof: { type: String, required: true },
+    plan: { type: String },
+    amount: { type: Number },
     fileName: { type: String, required: true },
     fileSize: { type: Number, required: true },
     fileType: { type: String, required: true },

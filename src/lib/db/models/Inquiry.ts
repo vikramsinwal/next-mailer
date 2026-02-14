@@ -9,6 +9,8 @@ export interface InquiryDocument extends Document {
   categoryName?: string;
   subCategory: string;
   subCategoryName?: string;
+  plan?: string;
+  amount?: number;
   message?: string;
   status: "pending" | "sent" | "failed";
   error?: string;
@@ -26,6 +28,8 @@ const InquirySchema = new Schema<InquiryDocument>(
     categoryName: { type: String },
     subCategory: { type: String, required: true },
     subCategoryName: { type: String },
+    plan: { type: String },
+    amount: { type: Number },
     message: { type: String },
     status: {
       type: String,

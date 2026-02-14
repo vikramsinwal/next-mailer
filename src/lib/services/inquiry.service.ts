@@ -12,6 +12,8 @@ interface InquiryParams {
   subCategory: string;
   subCategoryName?: string;
   message?: string;
+  plan?: string;
+  amount?: number;
 }
 
 export async function saveInquiry(data: InquiryParams) {
@@ -83,7 +85,37 @@ export async function sendInquiryMail(data: InquiryParams): Promise<void> {
               </tr>
             </table>
           </div>
-
+            ${
+              data.plan || data.amount
+                ? `
+          <div style="margin: 20px 0;">
+            <h3 style="color: #10b981; margin-bottom: 15px;">💰 Plan & Pricing</h3>
+            <table style="width: 100%; border-collapse: collapse;">
+              ${
+                data.plan
+                  ? `
+              <tr>
+                <td style="padding: 10px; background-color: #f9fafb; font-weight: bold; width: 40%;">Selected Plan:</td>
+                <td style="padding: 10px; background-color: #fff; font-weight: 600; color: #059669;">${data.plan}</td>
+              </tr>
+              `
+                  : ""
+              }
+              ${
+                data.amount
+                  ? `
+              <tr>
+                <td style="padding: 10px; background-color: #f9fafb; font-weight: bold; width: 40%;">Amount:</td>
+                <td style="padding: 10px; background-color: #fff; font-weight: 600; color: #059669; font-size: 18px;">$${data.amount.toFixed(2)}</td>
+              </tr>
+              `
+                  : ""
+              }
+            </table>
+          </div>
+          `
+                : ""
+            }
           ${
             data.message
               ? `

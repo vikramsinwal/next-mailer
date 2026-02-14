@@ -26,6 +26,8 @@ export async function POST(req: Request) {
       subCategory: data.subCategory,
       subCategoryName: data.subCategoryName,
       message: data.message,
+      plan: data.plan,
+      amount: data.amount,
     });
 
     // Send emails (try-catch to not fail the request if email fails)
